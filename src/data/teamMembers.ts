@@ -30,6 +30,22 @@ export const teamMembers: TeamMember[] = [
     portfolioLabel: "shin-thant-aung-portfolio.vercel.app",
   },
   {
+    id: "shweta-suryawanshi",
+    name: "Shweta Suryawanshi",
+    shortName: "Shweta",
+    country: "India",
+    flag: "🇮🇳",
+    focusArea: "Architecture & Urban Design",
+    professionalImage: "/media/images/team/shweta-professional.jpg",
+    aboutMeImage: "/media/images/team/shweta-about-me.jpg",
+    description:
+      "Bachelor of Architecture (B.Arch) with 3+ years as an Architectural Designer and Project Coordinator at MNC DAR Group. Skilled in AutoCAD, Revit, Photoshop, and SketchUp. Leads the Kampong Glam Cultural Heritage tour.",
+    portfolioUrl:
+      "https://drive.google.com/file/d/12x34jBBhQoNMOxkIQftiGFxv57c8_VDV/view?usp=sharing",
+    portfolioQr: "/media/images/team/shweta-qr.png",
+    portfolioLabel: "View Portfolio (Google Drive)",
+  },
+  {
     id: "su-sandy-myint",
     name: "Su Sandy Myint",
     shortName: "Sandy",
@@ -45,33 +61,6 @@ export const teamMembers: TeamMember[] = [
     portfolioLabel: "su-sandy-myint-portfolio.vercel.app",
   },
   {
-    id: "aung-min-thant",
-    name: "Aung Min Thant",
-    shortName: "Aung",
-    country: "Myanmar",
-    flag: "🇲🇲",
-    focusArea: "Sustainability & Retail",
-    professionalImage: "/media/images/team/aung-professional.jpg",
-    aboutMeImage: "/media/images/team/aung-about-me.jpg",
-    description:
-      "Experienced in sales leadership and retail management across Myanmar. Former Assistant Manager at Jupiter Bar & Restaurant and Sales & Billing Supervisor at Mytel Telecom. Leads the Sustainability & Retail Walk tour.",
-  },
-  {
-    id: "shweta-suryawanshi",
-    name: "Shweta Suryawanshi",
-    shortName: "Shweta",
-    country: "India",
-    flag: "🇮🇳",
-    focusArea: "Architecture & Urban Design",
-    professionalImage: "/media/images/team/shweta-professional.jpg",
-    aboutMeImage: "/media/images/team/shweta-about-me.jpg",
-    description:
-      "Bachelor of Architecture (B.Arch) with 3+ years as an Architectural Designer and Project Coordinator at MNC DAR Group. Skilled in AutoCAD, Revit, Photoshop, and SketchUp. Leads the Kampong Glam Cultural Heritage tour.",
-    portfolioUrl: "https://drive.google.com/file/d/12x34jBBhQoNMOxkIQftiGFxv57c8_VDV/view?usp=sharing",
-    portfolioQr: "/media/images/team/shweta-qr.png",
-    portfolioLabel: "View Portfolio (Google Drive)",
-  },
-  {
     id: "sathya-subhavi-ravindra",
     name: "Sathya Subhavi Ravindra",
     shortName: "Sathya",
@@ -85,5 +74,17 @@ export const teamMembers: TeamMember[] = [
     portfolioUrl: "https://brand.site/SathyaRavindra",
     portfolioQr: "/media/images/team/sathya-qr.png",
     portfolioLabel: "brand.site/SathyaRavindra",
+  },
+  {
+    id: "aung-min-thant",
+    name: "Aung Min Thant",
+    shortName: "Aung",
+    country: "Myanmar",
+    flag: "🇲🇲",
+    focusArea: "Sustainability & Retail",
+    professionalImage: "/media/images/team/aung-professional.jpg",
+    aboutMeImage: "/media/images/team/aung-about-me.jpg",
+    description:
+      "Experienced in sales leadership and retail management across Myanmar. Former Assistant Manager at Jupiter Bar & Restaurant and Sales & Billing Supervisor at Mytel Telecom. Leads the Sustainability & Retail Walk tour.",
   },
 ];
