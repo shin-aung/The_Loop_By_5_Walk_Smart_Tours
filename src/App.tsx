@@ -7,12 +7,11 @@ import AboutPage from "./pages/AboutPage";
 import TeamPage from "./pages/TeamPage";
 import ToursPage from "./pages/ToursPage";
 import TourDetailsPage from "./pages/TourDetailsPage";
-import GalleryPage from "./pages/GalleryPage";
 import NewsletterPage from "./pages/NewsletterPage";
+import NewsletterOnlinePage from "./pages/NewsletterOnlinePage";
 import AchievementsPage from "./pages/AchievementsPage";
 import FuturePage from "./pages/FuturePage";
 
-// Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -32,11 +31,10 @@ function AppLayout() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/tours" element={<ToursPage />} />
         <Route path="/tours/:tourSlug" element={<TourDetailsPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/newsletter" element={<NewsletterPage />} />
+        <Route path="/newsletter/loop_by_5" element={<NewsletterOnlinePage />} />
         <Route path="/achievements" element={<AchievementsPage />} />
         <Route path="/future" element={<FuturePage />} />
-        {/* 404 fallback */}
         <Route
           path="*"
           element={

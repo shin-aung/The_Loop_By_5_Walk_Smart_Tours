@@ -53,9 +53,9 @@ export const achievements: Achievement[] = [
     id: 4,
     value: "1",
     title: "Website Launched",
-    description: "Online brand presence for tours, gallery, team information, and newsletter.",
+    description: "Online brand presence for tours, team information, and newsletter.",
     details: [
-      "Artistic photo gallery showcasing all five Walk Smart Tours",
+      "Tour descriptions, routes and upcoming events for all five Walk Smart Tours",
       "Professional team bios and educational backgrounds",
       "Full tour descriptions, routes and upcoming events",
       "QR codes on all materials for easy mobile access",

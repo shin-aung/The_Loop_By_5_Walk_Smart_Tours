@@ -27,7 +27,7 @@ export const tours: Tour[] = [
     location: "Haji Lane, Kampong Glam",
     duration: "1.5 to 2 hours",
     bestTime: "Morning or late afternoon",
-    image: "/media/images/tours/haji-lane.jpg",
+    image: "/media/images/tours/haji-lane.jpg", // Source: Newsletter cover, Haji Lane street art
     highlights: [
       "Street art and murals",
       "Indie boutiques and creative shops",
@@ -55,7 +55,7 @@ export const tours: Tour[] = [
     location: "Gardens by the Bay & Marina Bay",
     duration: "2 to 2.5 hours",
     bestTime: "Late afternoon or early evening",
-    image: "/media/images/tours/gardens-bay.jpg",
+    image: "/media/images/tours/gardens-bay.jpg", // Source: Presentation Slide 7 — Gardens by the Bay supertrees
     highlights: [
       "Supertree Grove at Gardens by the Bay",
       "Marina Bay Sands skyline views",
@@ -83,7 +83,7 @@ export const tours: Tour[] = [
     location: "Kampong Glam, Arab Street",
     duration: "1.5 to 2 hours",
     bestTime: "Morning to afternoon",
-    image: "/media/images/tours/kampong-glam.jpg",
+    image: "/media/images/tours/kampong-glam.jpg", // Source: Presentation Slide 9 — Kampong Glam Tour
     highlights: [
       "Sultan Mosque and Malay heritage",
       "Arab Street and textile traders",
@@ -111,7 +111,7 @@ export const tours: Tour[] = [
     location: "Central Singapore",
     duration: "1.5 to 2 hours",
     bestTime: "Weekday morning or afternoon",
-    image: "/media/images/tours/sustainability-retail.jpg",
+    image: "/media/images/tours/architecture-city.jpg", // Source: Presentation Slide 8 — Architecture & City Development
     highlights: [
       "Eco-friendly commercial spaces",
       "Singapore's green retail concepts",
@@ -139,7 +139,7 @@ export const tours: Tour[] = [
     location: "Singapore Tech Districts",
     duration: "1.5 to 2 hours",
     bestTime: "Weekday morning",
-    image: "/media/images/tours/technology-innovation.jpg",
+    image: "/media/images/tours/marina-bay.jpg", // Source: Presentation Slide 7 — Marina Bay Sands
     highlights: [
       "Smart Nation infrastructure examples",
       "Innovation hubs and tech campuses",

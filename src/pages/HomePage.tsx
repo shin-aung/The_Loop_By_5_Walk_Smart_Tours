@@ -102,11 +102,11 @@ export default function HomePage() {
               <Link to="/team" className="btn btn-outline-white">
                 Meet the Team
               </Link>
-              <Link to="/gallery" className="btn btn-outline-white">
-                View Gallery
-              </Link>
               <Link to="/newsletter" className="btn btn-outline-white">
                 Newsletter
+              </Link>
+              <Link to="/achievements" className="btn btn-outline-white">
+                Achievements
               </Link>
             </div>
           </div>

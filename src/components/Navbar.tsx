@@ -6,7 +6,6 @@ const navLinks = [
   { label: "About", to: "/about" },
   { label: "Team", to: "/team" },
   { label: "Tours", to: "/tours" },
-  { label: "Gallery", to: "/gallery" },
   { label: "Newsletter", to: "/newsletter" },
   { label: "Achievements", to: "/achievements" },
 ];

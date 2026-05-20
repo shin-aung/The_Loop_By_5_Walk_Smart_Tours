@@ -26,7 +26,6 @@ export default function Footer() {
               <li><Link to="/about" className="footer__link">About Us</Link></li>
               <li><Link to="/team" className="footer__link">Our Team</Link></li>
               <li><Link to="/tours" className="footer__link">Walk Smart Tours</Link></li>
-              <li><Link to="/gallery" className="footer__link">Gallery</Link></li>
             </ul>
           </div>
 

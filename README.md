@@ -39,8 +39,7 @@ src/
 │   ├── TourCard.tsx        ← Tour card with "See More" button
 │   ├── TeamCard.tsx        ← Team member card
 │   ├── AchievementCard.tsx ← Achievement stat card
-│   ├── SectionTitle.tsx    ← Reusable heading block
-│   └── GalleryGrid.tsx     ← Photo gallery grid
+│   └── SectionTitle.tsx    ← Reusable heading block
 ├── data/
 │   ├── tours.ts            ← All tour data (edit here)
 │   ├── teamMembers.ts      ← Team member data (edit here)
@@ -50,9 +49,9 @@ src/
 │   ├── AboutPage.tsx
 │   ├── TeamPage.tsx
 │   ├── ToursPage.tsx
-│   ├── TourDetailsPage.tsx ← Dynamic route /tours/:tourSlug
-│   ├── GalleryPage.tsx
-│   ├── NewsletterPage.tsx
+│   ├── TourDetailsPage.tsx       ← Dynamic route /tours/:tourSlug
+│   ├── NewsletterPage.tsx        ← Newsletter hub with download & view buttons
+│   ├── NewsletterOnlinePage.tsx  ← Online page-by-page viewer at /newsletter/loop_by_5
 │   ├── AchievementsPage.tsx
 │   └── FuturePage.tsx
 ├── styles/
@@ -66,24 +65,60 @@ src/
 
 ## 🌐 Routes
 
-| URL                           | Page                  |
-|-------------------------------|-----------------------|
-| `/`                           | Home                  |
-| `/about`                      | About / Brand Story   |
-| `/team`                       | Team Members          |
-| `/tours`                      | All Tours             |
-| `/tours/:tourSlug`            | Tour Details (dynamic)|
-| `/gallery`                    | Photo Gallery         |
-| `/newsletter`                 | Newsletter            |
-| `/achievements`               | Achievements          |
-| `/future`                     | Future Goals          |
+| URL                           | Page                          |
+|-------------------------------|-------------------------------|
+| `/`                           | Home                          |
+| `/about`                      | About / Brand Story           |
+| `/team`                       | Team Members                  |
+| `/tours`                      | All Tours                     |
+| `/tours/:tourSlug`            | Tour Details (dynamic)        |
+| `/newsletter`                 | Newsletter hub                |
+| `/newsletter/loop_by_5`       | Online newsletter viewer      |
+| `/achievements`               | Achievements                  |
+| `/future`                     | Future Goals                  |
 
-**Example tour URLs:**
+**Tour URLs:**
 - `/tours/haji-lane-the-lane-edit`
 - `/tours/gardens-by-the-bay-marina-bay`
 - `/tours/kampong-glam-cultural-heritage`
 - `/tours/sustainability-retail-walk`
 - `/tours/technology-innovation-circuit`
+
+---
+
+## 🖼️ Tour Images
+
+Tour images are sourced from the presentation slides and newsletter:
+
+| Tour | Image File | Source |
+|------|-----------|--------|
+| Haji Lane: The Lane Edit | `haji-lane.jpg` | Newsletter cover · Haji Lane street art |
+| Gardens by the Bay | `gardens-bay.jpg` | Presentation Slide 7 |
+| Marina Bay / Tech Tour | `marina-bay.jpg` | Presentation Slide 7 |
+| Kampong Glam | `kampong-glam.jpg` | Presentation Slide 9 |
+| Sustainability & Retail | `architecture-city.jpg` | Presentation Slide 8 |
+
+To replace a tour image, drop the new file into:
+```
+public/media/images/tours/
+```
+and update the `image` field in `src/data/tours.ts`.
+
+---
+
+## 📰 Newsletter
+
+The newsletter is stored at `public/media/documents/newsletter.pdf`.
+
+The online viewer at `/newsletter/loop_by_5` uses pre-rendered page images from:
+```
+public/media/images/newsletter/page-01.jpg … page-11.jpg
+```
+
+These were generated from the PDF at 150 DPI. If you replace the PDF, re-run:
+```bash
+pdftoppm -jpeg -r 150 public/media/documents/newsletter.pdf public/media/images/newsletter/page
+```
 
 ---
 
@@ -99,49 +134,20 @@ src/
 
 ---
 
-## 🖼️ Adding Images
+## 🖼️ Adding Team Photos
 
-Place images in the `public/media/images/` folder:
-
+Place photos in:
 ```
-public/
-└── media/
-    └── images/
-        ├── team/
-        │   ├── shin-thant-aung.jpg
-        │   ├── su-sandy-myint.jpg
-        │   ├── aung-min-thant.jpg
-        │   ├── shweta-suryawanshi.jpg
-        │   └── sathya-subhavi-ravindra.jpg
-        ├── tours/
-        │   ├── haji-lane.jpg
-        │   ├── gardens-bay.jpg
-        │   ├── kampong-glam.jpg
-        │   ├── sustainability-retail.jpg
-        │   └── technology-innovation.jpg
-        └── gallery/
-            ├── haji-lane-01.jpg
-            └── ... (see GalleryPage.tsx for full list)
+public/media/images/team/
 ```
+Names expected:
+- `shin-thant-aung.jpg`
+- `su-sandy-myint.jpg`
+- `aung-min-thant.jpg`
+- `shweta-suryawanshi.jpg`
+- `sathya-subhavi-ravindra.jpg`
 
-All images gracefully fall back to placeholders if not found.
-
----
-
-## 📰 Adding the Newsletter PDF
-
-Place the newsletter file at:
-```
-public/media/documents/newsletter.pdf
-```
-
----
-
-## ✏️ Updating Content
-
-- **Tours**: Edit `src/data/tours.ts`
-- **Team members**: Edit `src/data/teamMembers.ts`
-- **Achievements**: Edit `src/data/achievements.ts`
+Until photos are added, initials avatars are shown automatically.
 
 ---
 
@@ -163,5 +169,4 @@ public/media/documents/newsletter.pdf
 | Shweta Suryawanshi       | India 🇮🇳   | Architecture         |
 | Sathya Subhavi Ravindra  | Sri Lanka 🇱🇰 | Art & Culture      |
 
-**PGDM Group 5 · Corporate Communication · ACETEK College · May 2026**
-**Lecturer: Mr. Seow**
+**PGDM Group 5 · Corporate Communication · ACETEK College · May 2026 · Lecturer: Mr. Seow**

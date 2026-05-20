@@ -194,7 +194,7 @@ export default function AchievementsPage() {
           <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "1rem" }}>
             <Link to="/tours" className="btn btn-gold">View All Tours →</Link>
             <Link to="/newsletter" className="btn btn-outline-white">Read Newsletter</Link>
-            <Link to="/gallery" className="btn btn-outline-white">View Gallery</Link>
+            <Link to="/team" className="btn btn-outline-white">Meet the Team</Link>
           </div>
         </div>
       </section>
