@@ -295,7 +295,7 @@ export default function NewsletterPage() {
                     {" "}
                     Author:
                   </strong>{" "}
-                  Shweta /Shin /Sandy /Sathya /Aung ·
+                  Shweta Suryavanshi ·
                   <strong style={{ color: "var(--dark-brown)" }}>
                     {" "}
                     Created:

@@ -10,15 +10,15 @@ export interface Achievement {
 export const achievements: Achievement[] = [
   {
     id: 1,
-    value: "5",
+    value: "7",
     title: "Walk Smart Tours",
-    description: "Student-led free walking tour concepts focused on culture, art, architecture, heritage, innovation, and learning.",
+    description: "Seven student-led free walking tour concepts across culture, art, architecture, heritage, sustainability, technology, and immersive experiences.",
     details: [
       "Architecture · Heritage · Art & Culture themes",
       "Gardens by the Bay & Marina Bay Sands",
       "Haji Lane 'The Lane Edit' — street art & boutique culture",
       "Kampong Glam Cultural Heritage",
-      "All tours free, student-led, open to all PGDM students",
+      "All tours free, student-led and open to all PGDM students",
     ],
     icon: "🗺️",
   },
