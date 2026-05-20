@@ -108,3 +108,29 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Team card v2 responsive */
+@media (max-width: 768px) {
+  .team-card-v2__about-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .team-lightbox__box {
+    max-width: 100%;
+    max-height: 95vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card-v2__portfolio-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .team-card-v2__qr-link {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+}

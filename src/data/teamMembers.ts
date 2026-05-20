@@ -5,9 +5,12 @@ export interface TeamMember {
   country: string;
   flag: string;
   focusArea: string;
-  image: string;
+  professionalImage: string;
+  aboutMeImage: string;
   description: string;
-  isPending?: boolean;
+  portfolioUrl?: string;
+  portfolioQr?: string;
+  portfolioLabel?: string;
 }
 
 export const teamMembers: TeamMember[] = [
@@ -18,10 +21,13 @@ export const teamMembers: TeamMember[] = [
     country: "Myanmar",
     flag: "🇲🇲",
     focusArea: "Technology & Smart City",
-    image: "/media/images/team/shin-thant-aung.jpg",
+    professionalImage: "/media/images/team/shin-professional.jpg",
+    aboutMeImage: "/media/images/team/shin-about-me.jpg",
     description:
-      "Shin leads the Technology & Innovation Circuit tour, exploring Singapore's Smart Nation initiative and digital transformation. His passion for technology drives the group's digital presence and website development.",
-    isPending: false,
+      "Software developer and Bachelor of IT from James Cook University Singapore. Shin leads the Technology & Innovation Circuit tour, exploring Singapore's Smart Nation initiative. Thoughtful, ambitious, and growth-minded.",
+    portfolioUrl: "https://shin-thant-aung-portfolio.vercel.app/",
+    portfolioQr: "/media/images/team/shin-qr.png",
+    portfolioLabel: "shin-thant-aung-portfolio.vercel.app",
   },
   {
     id: "su-sandy-myint",
@@ -30,10 +36,13 @@ export const teamMembers: TeamMember[] = [
     country: "Myanmar",
     flag: "🇲🇲",
     focusArea: "Technology & Digital Media",
-    image: "/media/images/team/su-sandy-myint.jpg",
+    professionalImage: "/media/images/team/sandy-professional.jpg",
+    aboutMeImage: "/media/images/team/sandy-about-me.jpg",
     description:
-      "Sandy focuses on technology and digital media, bringing creativity to the group's content strategy. She contributes to the team's online presence and tour storytelling through digital platforms.",
-    isPending: false,
+      "Bachelor of Engineering in IT from Monywa Technological University, Myanmar. Web developer with experience at OrientWebs. Sandy brings digital creativity to the group's content and online presence.",
+    portfolioUrl: "https://su-sandy-myint-portfolio.vercel.app/",
+    portfolioQr: "/media/images/team/sandy-qr.png",
+    portfolioLabel: "su-sandy-myint-portfolio.vercel.app",
   },
   {
     id: "aung-min-thant",
@@ -42,10 +51,10 @@ export const teamMembers: TeamMember[] = [
     country: "Myanmar",
     flag: "🇲🇲",
     focusArea: "Sustainability & Retail",
-    image: "/media/images/team/aung-min-thant.jpg",
+    professionalImage: "/media/images/team/aung-professional.jpg",
+    aboutMeImage: "/media/images/team/aung-about-me.jpg",
     description:
-      "Aung specialises in sustainability and retail, curating the Sustainability & Retail Walk tour. He explores how Singapore integrates green practices into commercial environments and city development.",
-    isPending: false,
+      "Experienced in sales leadership and retail management across Myanmar. Former Assistant Manager at Jupiter Bar & Restaurant and Sales & Billing Supervisor at Mytel Telecom. Leads the Sustainability & Retail Walk tour.",
   },
   {
     id: "shweta-suryawanshi",
@@ -54,10 +63,13 @@ export const teamMembers: TeamMember[] = [
     country: "India",
     flag: "🇮🇳",
     focusArea: "Architecture & Urban Design",
-    image: "/media/images/team/shweta-suryawanshi.jpg",
+    professionalImage: "/media/images/team/shweta-professional.jpg",
+    aboutMeImage: "/media/images/team/shweta-about-me.jpg",
     description:
-      "Shweta leads the Kampong Glam Cultural Heritage tour with a keen eye for architecture and urban design. She explores how Singapore's built environment preserves culture while embracing modernity.",
-    isPending: false,
+      "Bachelor of Architecture (B.Arch) with 3+ years as an Architectural Designer and Project Coordinator at MNC DAR Group. Skilled in AutoCAD, Revit, Photoshop, and SketchUp. Leads the Kampong Glam Cultural Heritage tour.",
+    portfolioUrl: "https://drive.google.com/file/d/12x34jBBhQoNMOxkIQftiGFxv57c8_VDV/view?usp=sharing",
+    portfolioQr: "/media/images/team/shweta-qr.png",
+    portfolioLabel: "View Portfolio (Google Drive)",
   },
   {
     id: "sathya-subhavi-ravindra",
@@ -66,9 +78,12 @@ export const teamMembers: TeamMember[] = [
     country: "Sri Lanka",
     flag: "🇱🇰",
     focusArea: "Art & Culture",
-    image: "/media/images/team/sathya-subhavi-ravindra.jpg",
+    professionalImage: "/media/images/team/sathya-professional.jpg",
+    aboutMeImage: "/media/images/team/sathya-about-me.jpg",
     description:
-      "Sathya brings the art and culture perspective to The Loop by 5, curating the Haji Lane: The Lane Edit tour. Her love for creative expression and cultural storytelling shapes the group's visual identity.",
-    isPending: false,
+      "Creative designer and digital artist with a Bachelor of Fine Arts from Lovely Professional University, India. Freelance designer since 2018, with solo digital art exhibition at Alliance Française de Colombo. Leads the Haji Lane: The Lane Edit tour.",
+    portfolioUrl: "https://brand.site/SathyaRavindra",
+    portfolioQr: "/media/images/team/sathya-qr.png",
+    portfolioLabel: "brand.site/SathyaRavindra",
   },
 ];

@@ -1123,3 +1123,333 @@ p {
   border-radius: 50px;
   text-transform: uppercase;
 }
+
+/* =============================================
+   TEAM CARD V2 — with professional photo, QR, lightbox
+   ============================================= */
+
+.team-card-v2 {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card-v2:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Photo area */
+.team-card-v2__photo-wrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--light-beige), #ddd0c0);
+  flex-shrink: 0;
+}
+
+.team-card-v2__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.team-card-v2:hover .team-card-v2__photo {
+  transform: scale(1.04);
+}
+
+.team-card-v2__photo-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--dark-brown), var(--warm-brown));
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+}
+
+.team-card-v2__flag {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  z-index: 2;
+}
+
+.team-card-v2__about-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(50,0,0,0.88) 0%, rgba(50,0,0,0.4) 70%, transparent 100%);
+  color: var(--gold-accent);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2rem 1rem 0.875rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(4px);
+  z-index: 2;
+}
+
+.team-card-v2:hover .team-card-v2__about-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Body */
+.team-card-v2__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.team-card-v2__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark-brown);
+  margin-bottom: 0.2rem;
+  line-height: 1.25;
+}
+
+.team-card-v2__country {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.625rem;
+}
+
+.team-card-v2__focus {
+  display: inline-block;
+  background: var(--light-beige);
+  color: var(--warm-brown);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 0.875rem;
+  border: 1px solid var(--border-light);
+}
+
+.team-card-v2__desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+/* Portfolio section */
+.team-card-v2__portfolio {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.125rem;
+  margin-top: auto;
+}
+
+.team-card-v2__portfolio-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  margin-bottom: 0.75rem;
+}
+
+.team-card-v2__portfolio-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* QR code */
+.team-card-v2__qr-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.team-card-v2__qr-link:hover {
+  transform: scale(1.05);
+}
+
+.team-card-v2__qr {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid var(--border-light);
+  padding: 4px;
+  background: white;
+  display: block;
+  transition: border-color 0.2s;
+}
+
+.team-card-v2__qr-link:hover .team-card-v2__qr {
+  border-color: var(--gold-accent);
+}
+
+.team-card-v2__qr-hint {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+/* Portfolio URL link */
+.team-card-v2__portfolio-url {
+  font-size: 0.78rem;
+  color: var(--dark-brown);
+  font-weight: 600;
+  word-break: break-all;
+  line-height: 1.45;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.team-card-v2__portfolio-url:hover {
+  color: var(--gold-accent);
+  text-decoration: underline;
+}
+
+.team-card-v2__no-portfolio {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* =============================================
+   TEAM LIGHTBOX — About Me modal
+   ============================================= */
+
+.team-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 0, 0, 0.82);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.team-lightbox__box {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.team-lightbox__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+  flex-shrink: 0;
+  background: var(--light-beige);
+}
+
+.team-lightbox__eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  margin-bottom: 0.2rem;
+}
+
+.team-lightbox__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--dark-brown);
+  line-height: 1.2;
+}
+
+.team-lightbox__close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--dark-brown);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+  margin-left: 1rem;
+}
+
+.team-lightbox__close:hover {
+  background: var(--gold-accent);
+  color: var(--dark-brown);
+}
+
+.team-lightbox__img-wrap {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.team-lightbox__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team-lightbox__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--light-beige);
+}

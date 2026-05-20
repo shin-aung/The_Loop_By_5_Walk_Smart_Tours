@@ -69,7 +69,7 @@ export const tours: Tour[] = [
       "Learn about Singapore's urban planning vision",
       "Observe how public space design encourages community interaction",
     ],
-    member: "Shin Thant Aung",
+    member: "Su Sandy Myint",
   },
   {
     id: 3,
@@ -97,11 +97,11 @@ export const tours: Tour[] = [
       "Learn how heritage conservation balances tradition and modernity",
       "Experience storytelling through architecture and street life",
     ],
-    member: "Shweta Suryawanshi",
+    member: "Sathya Subhavi Ravindra",
   },
   {
     id: 4,
-    name: "Singapore Sustainability & Retail Walk",
+    name: "Singapore Architecture and City Development Walk",
     slug: "sustainability-retail-walk",
     theme: "Sustainability, Retail & City Development",
     shortDescription:
@@ -125,7 +125,7 @@ export const tours: Tour[] = [
       "Learn how consumer spaces communicate brand and values",
       "Observe sustainable urban planning in practice",
     ],
-    member: "Aung Min Thant",
+    member: "Shweta Suryavanshi",
   },
   {
     id: 5,
