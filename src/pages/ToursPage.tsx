@@ -1,10 +1,7 @@
-import { lazy, Suspense } from "react";
 import SectionTitle from "../components/SectionTitle";
 import TourCard from "../components/TourCard";
+import TourMap from "../components/TourMap";
 import { tours } from "../data/tours";
-
-// Lazy load the map to avoid issues if Leaflet CDN hasn't loaded yet
-const TourMap = lazy(() => import("../components/TourMap"));
 
 export default function ToursPage() {
   return (
@@ -57,25 +54,7 @@ export default function ToursPage() {
             center
           />
 
-          <Suspense
-            fallback={
-              <div style={{
-                height: "480px",
-                borderRadius: "var(--radius-lg)",
-                background: "var(--light-beige)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                border: "1px solid var(--border-light)",
-                flexDirection: "column", gap: "1rem",
-              }}>
-                <div style={{ fontSize: "2rem" }}>🗺️</div>
-                <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
-                  Loading map…
-                </p>
-              </div>
-            }
-          >
-            <TourMap />
-          </Suspense>
+          <TourMap />
         </div>
       </section>
 

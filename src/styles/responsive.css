@@ -134,3 +134,12 @@
     gap: 0.75rem;
   }
 }
+
+/* Tour SVG map responsive */
+@media (max-width: 768px) {
+  /* On mobile the SVG scales naturally via viewBox, legend stacks to 2-col */
+}
+
+@media (max-width: 480px) {
+  /* Legend wraps to 1 column on very small screens */
+}
