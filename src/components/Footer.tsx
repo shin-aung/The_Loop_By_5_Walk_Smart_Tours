@@ -9,8 +9,22 @@ export default function Footer() {
         <div className="footer__grid">
           {/* Brand */}
           <div className="footer__brand">
-            <div className="footer__brand-name">The Loop by 5</div>
-            <div className="footer__brand-tagline">Walk Smart Tours for Students</div>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.875rem", marginBottom: "0.75rem" }}>
+              <img
+                src="/media/images/logo.png"
+                alt="The Loop by 5"
+                style={{
+                  width: "52px", height: "52px",
+                  borderRadius: "50%", objectFit: "cover",
+                  border: "2px solid rgba(200,155,90,0.35)",
+                  flexShrink: 0,
+                }}
+              />
+              <div>
+                <div className="footer__brand-name">The Loop by 5</div>
+                <div className="footer__brand-tagline">Walk Smart Tours for Students</div>
+              </div>
+            </div>
             <p className="footer__brand-desc">
               Free educational walking tours that help PGDM students explore,
               learn, and connect with Singapore's culture, art, heritage, and

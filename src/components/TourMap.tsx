@@ -108,7 +108,102 @@ function makeIcon(num: number, active: boolean, color: string) {
   });
 }
 
-// ─── Sub-component: marker + popup per tour ───────────────────────────────────
+// ─── MRT stations (nearest starting point for each tour) ─────────────────────
+interface MRTStation {
+  name: string;
+  position: [number, number];
+  lines: string;
+  tourSlug: string;
+}
+
+const MRT_STATIONS: MRTStation[] = [
+  { name: "Bugis MRT",        position: [1.3007, 103.8561], lines: "EW / DT Line",  tourSlug: "kampong-glam-cultural-heritage" },
+  { name: "Marina Bay MRT",   position: [1.2775, 103.8531], lines: "CC / NS Line",  tourSlug: "marina-bay-tech-architecture-walk" },
+  { name: "HarbourFront MRT", position: [1.2648, 103.8195], lines: "NE / CC Line",  tourSlug: "sentosa-island-art-light-culture" },
+  { name: "Bayfront MRT",     position: [1.2830, 103.8593], lines: "CC / DT Line",  tourSlug: "gardens-by-the-bay" },
+  { name: "Bayfront MRT",     position: [1.2832, 103.8597], lines: "CC / DT Line",  tourSlug: "marina-bay-sands" },
+  { name: "Dhoby Ghaut MRT",  position: [1.2989, 103.8458], lines: "NS / CC / NE",  tourSlug: "sustainability-retail-walk" },
+  { name: "Paya Lebar MRT",   position: [1.3178, 103.8920], lines: "EW / CC Line",  tourSlug: "joo-chiat-cultural-heritage" },
+  { name: "Marina Bay MRT",   position: [1.2773, 103.8529], lines: "CC / NS Line",  tourSlug: "marina-barrage-tour" },
+  { name: "Esplanade MRT",    position: [1.2908, 103.8561], lines: "CC Line",       tourSlug: "suntec-city-tour" },
+];
+
+function makeMRTIcon(active: boolean) {
+  return L.divIcon({
+    html: `
+      <div style="
+        background:${active ? "#c0392b" : "#2c3e50"};
+        color:#fff;
+        border:2px solid ${active ? "#e74c3c" : "rgba(255,255,255,0.6)"};
+        border-radius:6px;
+        padding:2px 6px;
+        font-size:9px;
+        font-weight:800;
+        font-family:'DM Sans',system-ui,sans-serif;
+        white-space:nowrap;
+        letter-spacing:.04em;
+        box-shadow:0 2px 6px rgba(0,0,0,0.4);
+        display:flex;align-items:center;gap:3px;
+      ">
+        <span style="font-size:10px;">🚇</span> MRT
+      </div>`,
+    className: "",
+    iconSize: [52, 22],
+    iconAnchor: [26, 11],
+    popupAnchor: [0, -14],
+  });
+}
+
+// ─── MRT Marker sub-component ─────────────────────────────────────────────────
+function MRTMarker({
+  station, active,
+}: {
+  station: MRTStation;
+  active: boolean;
+}) {
+  const color = ROUTE_COLORS[station.tourSlug] ?? "#C89B5A";
+  return (
+    <Marker
+      position={station.position}
+      icon={makeMRTIcon(active)}
+      zIndexOffset={active ? 500 : 0}
+    >
+      <Popup maxWidth={200} className="tour-popup">
+        <div style={{ fontFamily: "'DM Sans',system-ui,sans-serif", padding: "2px" }}>
+          <div style={{
+            height: "3px", background: color,
+            borderRadius: "2px", marginBottom: "7px",
+          }} />
+          <div style={{
+            display: "flex", alignItems: "center", gap: "6px",
+            marginBottom: "4px",
+          }}>
+            <span style={{ fontSize: "16px" }}>🚇</span>
+            <div>
+              <div style={{
+                fontWeight: 800, fontSize: "13px", color: "#320000", lineHeight: 1.2,
+              }}>
+                {station.name}
+              </div>
+              <div style={{ fontSize: "10px", color: "#999", marginTop: "1px" }}>
+                {station.lines}
+              </div>
+            </div>
+          </div>
+          <div style={{
+            fontSize: "10px", color: color, fontWeight: 700,
+            background: `${color}18`, padding: "3px 7px",
+            borderRadius: "4px", display: "inline-block",
+          }}>
+            Start point for this tour
+          </div>
+        </div>
+      </Popup>
+    </Marker>
+  );
+}
+
+
 function TourMarker({
   tour, num, active, onSelect,
 }: {
@@ -310,6 +405,18 @@ export default function TourMap() {
             );
           })}
 
+          {/* MRT station markers */}
+          {MRT_STATIONS.map((station, idx) => {
+            const isActive = activeSlug === null || activeSlug === station.tourSlug;
+            return (
+              <MRTMarker
+                key={`mrt-${station.tourSlug}-${idx}`}
+                station={station}
+                active={isActive && activeSlug === station.tourSlug}
+              />
+            );
+          })}
+
           {/* Tour markers */}
           {tours.map((tour, idx) => {
             if (!tour.coordinates) return null;
@@ -326,13 +433,25 @@ export default function TourMap() {
         </MapContainer>
       </div>
 
-      {/* Map hint */}
-      <p style={{
-        textAlign: "center", marginTop: "0.625rem",
-        fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic",
+      {/* Map hints */}
+      <div style={{
+        display: "flex", flexWrap: "wrap", gap: "1rem",
+        justifyContent: "center", marginTop: "0.625rem",
       }}>
-        Click any marker to see route details · Click again or ✕ to deselect
-      </p>
+        {[
+          { icon: "🔵", text: "Numbered pins = Tour location" },
+          { icon: "🚇", text: "MRT badge = Nearest station (start point)" },
+          { icon: "💡", text: "Click any pin or legend item for route details" },
+        ].map(item => (
+          <span key={item.text} style={{
+            fontSize: "0.72rem", color: "var(--text-muted)",
+            display: "flex", alignItems: "center", gap: "0.35rem",
+            fontStyle: "italic",
+          }}>
+            {item.icon} {item.text}
+          </span>
+        ))}
+      </div>
 
       {/* Legend */}
       <div style={{

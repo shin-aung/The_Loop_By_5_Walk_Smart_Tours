@@ -36,17 +36,33 @@ export default function HomePage() {
             <span
               className="fade-in"
               style={{
-                display: "inline-block",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.875rem",
+                marginBottom: "1.25rem",
+              }}
+            >
+              <img
+                src="/media/images/logo.png"
+                alt="The Loop by 5 logo"
+                style={{
+                  width: "64px",
+                  height: "64px",
+                  borderRadius: "50%",
+                  border: "2px solid rgba(200,155,90,0.5)",
+                  objectFit: "cover",
+                }}
+              />
+              <span style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "0.72rem",
                 fontWeight: 700,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
                 color: "var(--gold-accent)",
-                marginBottom: "1.25rem",
-              }}
-            >
-              PGDM Group 5 · Corporate Communication · May 2026
+              }}>
+                PGDM Group 5 · Corporate Communication · May 2026
+              </span>
             </span>
 
             <h1

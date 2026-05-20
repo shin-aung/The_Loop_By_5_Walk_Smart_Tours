@@ -362,19 +362,18 @@ p {
   text-decoration: none;
 }
 
-.navbar__logo-mark {
-  width: 40px;
-  height: 40px;
-  background: var(--gold-accent);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--dark-brown);
+.navbar__logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid rgba(200,155,90,0.4);
+  transition: border-color 0.2s;
+}
+
+.navbar__logo:hover .navbar__logo-img {
+  border-color: var(--gold-accent);
 }
 
 .navbar__logo-text {

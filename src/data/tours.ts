@@ -116,7 +116,7 @@ export const tours: Tour[] = [
     duration: "2 – 2.5 hours",
     timeRange: "4:00 – 6:30 PM",
     bestTime: "Late afternoon (4:00 PM start recommended)",
-    image: "/media/images/tours/marina-bay-tech-plan.jpg",
+    image: "/media/images/tours/marina-bay-tech.jpg",
     planImage: "/media/images/tours/shin-tour-plan-full.jpg",
     highlights: [
       "Green Heart Marina One — 65,000+ sq ft sustainable urban garden",
@@ -182,7 +182,7 @@ export const tours: Tour[] = [
     timeRange: "5:00 – 9:00 PM",
     specialNote: "ImagiNite Show: 7:30 PM daily",
     bestTime: "Late afternoon start (5:00 PM) to catch the ImagiNite show",
-    image: "/media/images/tours/sentosa-island-plan.jpg",
+    image: "/media/images/tours/sentosa-island.jpg",
     planImage: "/media/images/tours/shin-tour-plan-full.jpg",
     highlights: [
       "Sentosa Boardwalk — scenic elevated walkway from VivoCity",
@@ -373,7 +373,7 @@ export const tours: Tour[] = [
     duration: "2 – 2.5 hours",
     timeRange: "10:00 AM – 12:30 PM",
     bestTime: "Weekday morning to avoid shopping crowds",
-    image: "/media/images/tours/architecture-city.jpg",
+    image: "/media/images/tours/sustainability-retail.jpg",
     highlights: [
       "Green-certified commercial buildings and shopping developments",
       "Sustainable architecture features — green roofs, sky gardens, passive cooling",

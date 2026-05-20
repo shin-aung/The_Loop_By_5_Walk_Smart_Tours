@@ -42,7 +42,19 @@ export default function AboutPage() {
         <div className="container">
           <div className="page-hero__content">
             <span className="page-hero__eyebrow">Our Brand Story</span>
-            <h1 className="page-hero__title">About The Loop by 5</h1>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", marginBottom: "1rem" }}>
+              <img
+                src="/media/images/logo.png"
+                alt="The Loop by 5 logo"
+                style={{
+                  width: "72px", height: "72px",
+                  borderRadius: "50%", objectFit: "cover",
+                  border: "2px solid rgba(200,155,90,0.45)",
+                  flexShrink: 0,
+                }}
+              />
+              <h1 className="page-hero__title" style={{ marginBottom: 0 }}>About The Loop by 5</h1>
+            </div>
             <p className="page-hero__description">
               Discover who we are, what brought us together, and why we created
               Walk Smart Free Walking Tours for students in Singapore.

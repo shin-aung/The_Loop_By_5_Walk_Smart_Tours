@@ -29,7 +29,11 @@ export default function Navbar() {
         <div className="navbar__inner">
           {/* Logo */}
           <Link to="/" className="navbar__logo" onClick={closeMenu}>
-            <div className="navbar__logo-mark">L5</div>
+            <img
+              src="/media/images/logo.png"
+              alt="The Loop by 5 — Walk Smart Tours"
+              className="navbar__logo-img"
+            />
             <div className="navbar__logo-text">
               <span className="navbar__logo-name">The Loop by 5</span>
               <span className="navbar__logo-tagline">Walk Smart Tours</span>
