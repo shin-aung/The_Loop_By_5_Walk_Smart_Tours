@@ -34,6 +34,7 @@ export interface Tour {
   makeItMemorable?: string[];
   usefulLinks?: UsefulLink[];
   member?: string;
+  coordinates?: [number, number]; // [lat, lng]
 }
 
 export const tours: Tour[] = [
@@ -45,6 +46,7 @@ export const tours: Tour[] = [
     id: 1,
     name: "Kampong Glam Tour",
     slug: "kampong-glam-cultural-heritage",
+    coordinates: [1.3022, 103.8624],
     theme: "Art, Creativity & Cultural Heritage · Famous for Murals",
     shortDescription:
       "Explore bold murals, the golden-domed Sultan Mosque, Arab Street, and the vibrant Malay-Muslim heritage of Kampong Glam.",
@@ -103,6 +105,7 @@ export const tours: Tour[] = [
     id: 2,
     name: "Marina Bay: Tech, Architecture & Innovation Walk",
     slug: "marina-bay-tech-architecture-walk",
+    coordinates: [1.2799, 103.8569],
     planLabel: "Plan A",
     theme: "Technology · Architecture · Sustainability · Retail Innovation",
     shortDescription:
@@ -167,6 +170,7 @@ export const tours: Tour[] = [
     id: 3,
     name: "Sentosa Island: Art, Light & Culture",
     slug: "sentosa-island-art-light-culture",
+    coordinates: [1.2598, 103.8233],
     planLabel: "Plan B",
     theme: "Art · Culture · Immersive Technology · Leisure",
     shortDescription:
@@ -234,6 +238,7 @@ export const tours: Tour[] = [
     id: 4,
     name: "Gardens by the Bay",
     slug: "gardens-by-the-bay",
+    coordinates: [1.2816, 103.8636],
     theme: "Nature, Futuristic Design & Sustainable Innovation",
     shortDescription:
       "Walk among the iconic Supertrees, cross the OCBC Skywalk, and discover how Gardens by the Bay merges nature with futuristic design.",
@@ -295,6 +300,7 @@ export const tours: Tour[] = [
     id: 5,
     name: "Marina Bay Sands",
     slug: "marina-bay-sands",
+    coordinates: [1.2834, 103.8607],
     theme: "Iconic Landmark & Luxury Experience · Where Luxury Meets Iconic Views",
     shortDescription:
       "Experience panoramic 360° skyline views, the iconic SkyPark, ArtScience Museum, and the free Spectra light & water show.",
@@ -357,6 +363,7 @@ export const tours: Tour[] = [
     id: 6,
     name: "Sustainability & Retail Walk",
     slug: "sustainability-retail-walk",
+    coordinates: [1.2996, 103.8456],
     theme: "Sustainability · Retail Innovation · City Development",
     shortDescription:
       "Explore how Singapore weaves sustainability into its retail environments, commercial spaces, and city planning.",
@@ -415,6 +422,7 @@ export const tours: Tour[] = [
     id: 7,
     name: "Joo Chiat Tour",
     slug: "joo-chiat-cultural-heritage",
+    coordinates: [1.3134, 103.9056],
     theme: "Peranakan Heritage · Colourful Shophouses · Living Culture",
     shortDescription:
       "Walk through Joo Chiat's famous Peranakan shophouses, intricate heritage tiles, carved wooden shutters, and vibrant multicultural community.",
@@ -464,5 +472,126 @@ export const tours: Tour[] = [
       "Try a traditional Nonya kueh from a heritage bakery on the route",
     ],
     member: "Sathya Subhavi Ravindra",
+  },
+
+  /* ══════════════════════════════════════════════════
+     8 · MARINA BARRAGE TOUR — by Aung
+  ══════════════════════════════════════════════════ */
+  {
+    id: 8,
+    name: "Marina Barrage Tour",
+    slug: "marina-barrage-tour",
+    theme: "Sustainability Meets Smart Design · IT, Art, Architecture & Retail Discovery",
+    shortDescription:
+      "Discover how Marina Barrage controls floods, harvests clean water, and doubles as a stunning rooftop green park for the community.",
+    fullDescription:
+      "Marina Barrage is one of Singapore's most remarkable feats of sustainable engineering — a dam across the Marina Channel that serves three purposes: flood control, a freshwater reservoir, and a vibrant public space. This Walk Smart Tour takes students through the smart technology that powers real-time water management, the art installations and green spaces on the rooftop garden, and the community spaces that bring people together around sustainability and innovation. It is a perfect example of how Singapore turns infrastructure into inspiration.",
+    location: "Marina Barrage, 8 Marina Gardens Drive, Singapore 018951",
+    duration: "2 – 2.5 hours",
+    timeRange: "10:00 AM – 12:30 PM",
+    bestTime: "Morning — cooler temperatures and good light for photography",
+    image: "/media/images/tours/marina-barrage.jpg",
+    planImage: "/media/images/tours/aung-tour-plan-full.jpg",
+    coordinates: [1.2807, 103.8721],
+    highlights: [
+      "Marina Barrage dam — Singapore's first reservoir in the heart of the city",
+      "Smart sensors and digital water management systems on display",
+      "Rooftop green park with panoramic views of the Marina Bay skyline",
+      "Public art installations blending nature and innovation",
+      "Sustainable Engineering Gallery inside the visitor centre",
+    ],
+    learningObjectives: [
+      "Understand sustainable water engineering and flood management systems",
+      "Explore how smart technology powers real-time water infrastructure",
+      "Learn how art and landscape design humanise public utility spaces",
+      "Observe how sustainability and community life can share the same space",
+    ],
+    itinerary: [
+      { time: "10:00 AM", activity: "Meet & Briefing", duration: "10 min", description: "Marina Barrage main entrance / bus stop · Attendance & introduction to Singapore's water story" },
+      { time: "10:10 AM", activity: "Sustainable Engineering Gallery", duration: "30 min", description: "Explore the free visitor centre — learn how the barrage controls floods, stores water and powers the city" },
+      { time: "10:40 AM", activity: "Smart Technology Walkthrough", duration: "25 min", description: "See the sensors, digital monitoring systems and control room displays that manage water levels in real time" },
+      { time: "11:05 AM", activity: "Rooftop Green Park", duration: "35 min", description: "Walk the rooftop garden, discover public art installations and enjoy panoramic views of Marina Bay and the city skyline" },
+      { time: "11:40 AM", activity: "Water Landscape & Community Spaces", duration: "20 min", description: "Explore the waterfront promenade, picnic lawns and family spaces that make Marina Barrage a community destination" },
+      { time: "12:00 PM", activity: "Group Closing", duration: "20 min", description: "Group reflection, Q&A and group photo with the Marina Bay skyline backdrop" },
+    ],
+    howToGetThere: [
+      "Take MRT to Marina Bay Station (Circle / North-South Line)",
+      "Board Bus 400 from Marina Bay Bus Interchange to Marina Barrage (10 min)",
+      "Or walk from Gardens by the Bay along Marina Gardens Drive (15–20 min)",
+      "Marina Barrage is located at the southern tip of Marina Gardens Drive",
+    ],
+    goodToKnow: [
+      "Entry to Marina Barrage and the Sustainable Engineering Gallery is free",
+      "The rooftop green park is open daily — great for kite-flying and picnics",
+      "Bring sunscreen — the rooftop is fully exposed",
+      "Toilets and a café are available inside the visitor centre",
+    ],
+    makeItMemorable: [
+      "Go to the rooftop for a 360° view of Marina Bay Sands and the city skyline",
+      "Look for the real-time water level displays inside the control gallery",
+      "Find the public art installations along the waterfront walkway",
+    ],
+    member: "Aung Min Thant",
+  },
+
+  /* ══════════════════════════════════════════════════
+     9 · SUNTEC CITY TOUR — by Aung
+  ══════════════════════════════════════════════════ */
+  {
+    id: 9,
+    name: "Suntec City Tour",
+    slug: "suntec-city-tour",
+    theme: "Where Business, Art & Retail Meet · IT, Art, Architecture & Retail Discovery",
+    shortDescription:
+      "Explore the architectural icon of Suntec City, the world-famous Fountain of Wealth, smart tech integration, and Singapore's premier retail experience.",
+    fullDescription:
+      "Suntec City is one of Asia's most forward-thinking commercial developments — a landmark designed around the metaphor of the human hand, with the Fountain of Wealth at its palm. This Walk Smart Tour takes students through the visionary architecture of Suntec's five towers, the world-famous Fountain of Wealth (once the largest fountain in the world), the smart technology systems powering events and building management, and a vibrant retail and lifestyle destination. It is where business, art, innovation, and shopping experience come together in one iconic destination.",
+    location: "Suntec City, 3 Temasek Boulevard, Singapore 038983",
+    duration: "2 – 2.5 hours",
+    timeRange: "2:00 PM – 4:30 PM",
+    bestTime: "Afternoon — Fountain of Wealth is active at scheduled times",
+    image: "/media/images/tours/suntec-city.jpg",
+    planImage: "/media/images/tours/aung-tour-plan-full.jpg",
+    coordinates: [1.2942, 103.8573],
+    highlights: [
+      "Fountain of Wealth — once the world's largest fountain, designed as an open palm",
+      "Suntec City's five-tower design based on the metaphor of the human hand",
+      "IT & Innovation Hub — smart building systems for events, security and sustainability",
+      "Interactive public art installations and creative spaces around the mall",
+      "Premier retail & lifestyle destination with global brands and dining",
+    ],
+    learningObjectives: [
+      "Understand how architectural symbolism shapes a building's identity and meaning",
+      "Explore how smart IT systems integrate into large commercial developments",
+      "Learn how public art creates engagement and community within retail spaces",
+      "Observe how Singapore's commercial buildings balance business, culture, and lifestyle",
+    ],
+    itinerary: [
+      { time: "2:00 PM", activity: "Meet & Briefing", duration: "10 min", description: "Esplanade MRT Exit A / Suntec City main entrance · Attendance & introduction to Suntec's design philosophy" },
+      { time: "2:10 PM", activity: "Fountain of Wealth", duration: "30 min", description: "Discover the story behind the world-famous fountain — its palm design, construction history and cultural significance" },
+      { time: "2:40 PM", activity: "Architectural Tour — Five Towers", duration: "25 min", description: "Walk the exterior and observe how the five towers form the shape of a hand — explore the design intent and engineering" },
+      { time: "3:05 PM", activity: "IT & Smart Building Features", duration: "30 min", description: "Learn how Suntec integrates smart technology for event management, security systems and sustainable building operations" },
+      { time: "3:35 PM", activity: "Public Art & Creative Installations", duration: "25 min", description: "Discover interactive art pieces and creative installations around the mall's interior and public spaces" },
+      { time: "4:00 PM", activity: "Retail & Lifestyle Exploration", duration: "15 min", description: "Brief walk through the retail floors — observe how global brands design their in-store experience and environment" },
+      { time: "4:15 PM", activity: "Group Closing", duration: "15 min", description: "Group photo at the Fountain of Wealth, final reflections and end at Esplanade MRT" },
+    ],
+    howToGetThere: [
+      "Take MRT to Esplanade Station (Circle Line) — Suntec City is directly connected via Exit A",
+      "Or take MRT to City Hall Station (East West / North South Line) and walk 8 min",
+      "Suntec City main entrance is on Temasek Boulevard facing the Fountain of Wealth",
+      "The Fountain of Wealth is located in the open plaza between all five towers",
+    ],
+    goodToKnow: [
+      "Fountain of Wealth operates at scheduled times — check the Suntec City website",
+      "Walking the fountain perimeter for good luck is a popular local tradition",
+      "Air-conditioned mall is comfortable in the afternoon heat",
+      "Free public WiFi is available throughout Suntec City",
+    ],
+    makeItMemorable: [
+      "Walk around the Fountain of Wealth three times for good luck — a Singapore tradition",
+      "Look up at all five towers from the fountain plaza to appreciate the hand-shape design",
+      "Find the most creative public art installation inside the mall and describe what it means to you",
+    ],
+    member: "Aung Min Thant",
   },
 ];

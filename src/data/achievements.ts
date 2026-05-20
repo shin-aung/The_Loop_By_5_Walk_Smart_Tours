@@ -10,9 +10,9 @@ export interface Achievement {
 export const achievements: Achievement[] = [
   {
     id: 1,
-    value: "7",
+    value: "9",
     title: "Walk Smart Tours",
-    description: "Seven student-led free walking tour concepts across culture, art, architecture, heritage, sustainability, technology, and immersive experiences.",
+    description: "Nine student-led free walking tour concepts across culture, art, architecture, heritage, sustainability, technology, and immersive experiences.",
     details: [
       "Architecture · Heritage · Art & Culture themes",
       "Gardens by the Bay & Marina Bay Sands",

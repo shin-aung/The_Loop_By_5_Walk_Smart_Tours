@@ -147,7 +147,7 @@ export default function HomePage() {
             }}
           >
             {[
-              { value: "7", label: "Free Tours" },
+              { value: "9", label: "Free Tours" },
               { value: "3", label: "Nations" },
               { value: "1", label: "Newsletter" },
               { value: "0$", label: "Cost to Join" },
